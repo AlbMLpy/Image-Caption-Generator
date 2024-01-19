@@ -1,15 +1,31 @@
 # Image Caption Generator
-Final project from Deep Learning 2022 course Skoltech
 
-Team members:
-* Farid Davletshin
-* Fakhriddin Tojiboev
-* Albert Sayapin
-* Olga Gorbunova
-* Evgeniy Garsiya
-* Hai Le
-* Lina Bashaeva
-* Dmitriy Gilyov
+## About the project:
+Generation of image content description is a fundamental problem in the artificial intelligence
+field that connects computer vision and natural language processing. In this project, we present
+a comparison of models that lie in an encoder-decoder framework. We specifically experimented with different classes of backbones like:
+Convolutional Neural Networks (CNN), Recurrent Neural Networks (RNN), and Transformers.
+To have a justifiable and consistent experiment, we trained/validated all frameworks along with its backbone on Flickr8k dataset. Moreover, we evaluated our models on a subset of COCO to assess
+the performance. Our results are as follows:
+- The best model is *Densenet161 + Trans-
+former* and it shows BLEU@1 score 62.57.
+- Experiments showed that such model con-
+figurations like *CNN + LSTM* are better in
+terms of *computation time* but they cannot
+achieve the same quality as Transformer-
+based architectures.
+
+See [report](report/final_report.pdf) for more details! :star:
+
+**Team members**:
+* Albert Saiapin :seedling:
+* Farid Davletshin :evergreen_tree:
+* Fakhriddin Tojiboev :palm_tree:
+* Olga Gorbunova :deciduous_tree:
+* Evgeniy Garsiya :herb:
+* Hai Le :maple_leaf:
+* Lina Bashaeva :blossom:
+* Dmitriy Gilyov :sunflower:
 
 
 # Environment
@@ -60,8 +76,7 @@ If you want to try re-train our models and/or observe evaluation results you are
 Open any notebook from there and follow the instructions inside.
 
 # Evaluation results
-Link to the [report](report/final_report.pdf) 
-### Flickr8k
+### Flickr8k Dataset
 
 |||bleu 1|bleu 2|bleu 3|bleu 4|
 |:---|:---:|:---:|:---:|:---:|:---:|
@@ -74,7 +89,7 @@ Link to the [report](report/final_report.pdf)
 |**inceptionV3 + transformer**|`train`<br>`val`<br>`test`|`61.44`<br>`60.37`<br>`60.19`|`41.09`<br>`39.84`<br>`39.19`|`27.52`<br>`26.26`<br>`25.70`|`18.29`<br>`17.25`<br>`16.70`|
 |**resnet34 + transformer**|`train`<br>`val`<br>`test`|`67.23`<br>`63.33`<br>`63.70`|`48.05`<br>`42.58`<br>`42.92`|`34.08`<br>`28.69`<br>`29.19`|`23.84`<br>`19.22`<br>`19.51`|
 
-### COCO val2014
+### COCO val2014 Dataset
 
 ||bleu 1|bleu 2|bleu 3|bleu 4|
 |:---|:---:|:---:|:---:|:---:|
